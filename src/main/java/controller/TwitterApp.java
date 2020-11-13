@@ -19,12 +19,13 @@ public class TwitterApp {
                 .setOAuthConsumerSecret("**")
                 .setOAuthAccessToken("**")
                 .setOAuthAccessTokenSecret("***");
-        TwitterFactory tf = new TwitterFactory(cb.build());
+        TwitterFactory tf = new TwitterFactory();
         Twitter twitter = tf.getInstance();
         return twitter;
     }
 
     void getTimeline(Twitter twitter) throws TwitterException {
+
         List<Status> statuses = twitter.getHomeTimeline();
         for (Status st : statuses) {
             System.out.println(st.getUser().getName() + "------" + st.getText()+"\n");
@@ -39,9 +40,9 @@ public class TwitterApp {
 
     public static void main(String[] args) throws TwitterException {
 
-        Scanner sc= new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("Enter the message to be posted");
-        String st= sc.nextLine();
+        String st = sc.nextLine();
         TwitterApp td = new TwitterApp();
         Twitter d = td.getTwitterInstance();
 
