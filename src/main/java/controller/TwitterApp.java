@@ -1,9 +1,6 @@
 package controller;
 
-import twitter4j.Status;
-import twitter4j.Twitter;
-import twitter4j.TwitterException;
-import twitter4j.TwitterFactory;
+import twitter4j.*;
 import twitter4j.conf.ConfigurationBuilder;
 
 import java.util.List;
@@ -38,16 +35,23 @@ public class TwitterApp {
         System.out.println("POst tweeted");
     }
 
+    void sendmessage(Twitter twitter,String msg) throws TwitterException {
+        String s="tweetbi79876331";
+        DirectMessage message = twitter.sendDirectMessage(s, msg);
+        System.out.println("Sent: " +message.getText() + " to @" + message.getRecipientScreenName());
+    }
     public static void main(String[] args) throws TwitterException {
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the message to be posted");
         String st = sc.nextLine();
+        String tt = sc.nextLine();
         TwitterApp td = new TwitterApp();
         Twitter d = td.getTwitterInstance();
 
         td.postTweet(d,st);
         td.getTimeline(d);
+        td.sendmessage(d,tt);
 
     }
 }
