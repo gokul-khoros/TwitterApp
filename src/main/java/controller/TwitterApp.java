@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class TwitterApp {
 
-
+/*
     public Twitter getTwitterInstance() {
         ConfigurationBuilder cb = new ConfigurationBuilder();
         cb.setDebugEnabled(true)
@@ -19,7 +19,8 @@ public class TwitterApp {
         TwitterFactory tf = new TwitterFactory();
         Twitter twitter = tf.getInstance();
         return twitter;
-    }
+  git   }
+*/
 
     void getTimeline(Twitter twitter) throws TwitterException {
 
