@@ -36,7 +36,7 @@ public class TwitterApp {
         System.out.println("POst tweeted");
     }
     void sendMessage(Twitter twitter,String msg) throws TwitterException {
-        String s="tweetbi79876331";
+        String s="***";
         DirectMessage message = twitter.sendDirectMessage(s, msg);
         System.out.println("Sent: " +message.getText() + " to @" + message.getRecipientId());
     }
