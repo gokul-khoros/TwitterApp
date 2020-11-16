@@ -14,7 +14,7 @@ public class TwitterApp {
         cb.setDebugEnabled(true)
                 .setOAuthConsumerKey("**")
                 .setOAuthConsumerSecret("***")
-                .setOAuthAccessToken("***)
+                .setOAuthAccessToken("****")
                 .setOAuthAccessTokenSecret("***");
         TwitterFactory tf = new TwitterFactory(cb.build());
         Twitter twitter = tf.getInstance();
