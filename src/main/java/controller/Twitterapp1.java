@@ -33,6 +33,8 @@ public class Twitterapp1{
             System.out.println(st.getUser().getName() + "------" + st.getText()+"\n");
         }
     }
+
+
     public static void main(String[] args) throws TwitterException {
 
         Scanner sc = new Scanner(System.in);
