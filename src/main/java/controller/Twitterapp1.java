@@ -7,14 +7,7 @@ import java.util.Scanner;
 
 public class Twitterapp1{
 
-    public static Twitter getTwitterInstance() {
 
-        TwitterFactory tf = new TwitterFactory();
-        Twitter twitter = tf.getInstance();
-        return twitter;
-
-
-    }
 
     public static void postTweet(String msg) throws TwitterException {
 
@@ -33,6 +26,18 @@ public class Twitterapp1{
             System.out.println(st.getUser().getName() + "------" + st.getText()+"\n");
         }
     }
+    void sendDirectMessage(String msg, String s) throws TwitterException {
+        Twitter twitter= TwitterFactory.getSingleton();
+        DirectMessage message = twitter.sendDirectMessage(s, msg);
+        System.out.println("Sent: " +message.getText() + " to @" + message.getRecipientId());
+    }
+    void getOneUserTimeline(String userId) throws TwitterException {
+        Twitter twitter= TwitterFactory.getSingleton();
+        List<Status> statuses = twitter.getUserTimeline(userId);
+        for (Status st : statuses) {
+            System.out.println(st.getUser().getName() + "------" + st.getText()+"\n");
+        }
+    }
 
 
     public static void main(String[] args) throws TwitterException {
@@ -40,17 +45,17 @@ public class Twitterapp1{
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the message to be posted");
         String st = sc.nextLine();
+        System.out.println("Enter the  message to be sent directly to the user and userId");
+        String tt = sc.nextLine();
+        String ht = sc.nextLine();
+        System.out.println("Enter the user Id");
+        String t = sc.nextLine();
         Twitterapp1 td = new Twitterapp1();
-        Twitter d = getTwitterInstance();
+
 
         td.postTweet(st);
-
         td.getTimeline();
-
-
+        td.sendDirectMessage(tt,ht);
+        td.getOneUserTimeline(t);
     }
-
-
-
-
 }
