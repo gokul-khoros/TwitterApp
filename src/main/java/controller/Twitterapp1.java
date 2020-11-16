@@ -18,14 +18,7 @@ public class Twitterapp1{
 
 
     
-     public static void getTimeline() throws TwitterException {
 
-        Twitter twitter= TwitterFactory.getSingleton();
-        List<Status> statuses = twitter.getHomeTimeline();
-        for (Status st : statuses) {
-            System.out.println(st.getUser().getName() + "------" + st.getText()+"\n");
-        }
-    }
     void sendDirectMessage(String msg, String s) throws TwitterException {
         Twitter twitter= TwitterFactory.getSingleton();
         DirectMessage message = twitter.sendDirectMessage(s, msg);
@@ -54,7 +47,7 @@ public class Twitterapp1{
 
 
         td.postTweet(st);
-        td.getTimeline();
+        Twitterapp2.getTimeline();
         td.sendDirectMessage(tt,ht);
         td.getOneUserTimeline(t);
     }
