@@ -10,11 +10,15 @@ This branch focuses on :
     
 # RESULTS SCREENSHOTS:
 
-
+POST TWEETED:
+![image](https://user-images.githubusercontent.com/55702797/99675712-8e443980-2a9d-11eb-89d4-a9654a9139b1.png)
 
 
 ![image](https://user-images.githubusercontent.com/55702797/99675285-0a8a4d00-2a9d-11eb-8d34-840533f31fb3.png)
 
 
+
+
+GET TIMELINE:
 ![image](https://user-images.githubusercontent.com/55702797/99675522-5210d900-2a9d-11eb-8740-08375e963d0b.png)
 
