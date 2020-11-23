@@ -5,6 +5,10 @@ This branch focuses on :
     
 # RESULTS SCREENSHOTS:
 
+TwitterControllerTest:
+![image](https://user-images.githubusercontent.com/55702797/99930782-5a586500-2d78-11eb-9af8-bcca0bc7dfa7.png)
+
+
 
 
 
