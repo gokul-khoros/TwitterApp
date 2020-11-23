@@ -8,6 +8,10 @@ This branch focuses on :
 TwitterControllerTest:
 ![image](https://user-images.githubusercontent.com/55702797/99930782-5a586500-2d78-11eb-9af8-bcca0bc7dfa7.png)
 
+TwitterServiceTest:
+![image](https://user-images.githubusercontent.com/55702797/99930881-ab685900-2d78-11eb-9358-0e1ff714e5bc.png)
+
+
 
 
 
